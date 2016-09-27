@@ -8,6 +8,7 @@ package models;
 import com.avaje.ebean.Model;
 import java.util.Calendar;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import play.data.format.Formats;
@@ -26,7 +27,8 @@ public class Questions extends Model {
     
     @Constraints.Required
     @Formats.NonEmpty
-    public String question;
+    @Column(length=3000)
+    public String ques;
     
     @Constraints.Required
     @Formats.NonEmpty
@@ -39,7 +41,7 @@ public class Questions extends Model {
     
     public static Questions getQuestion(){
         Long id = 1L;
-        System.out.println(Questions.find.byId(id).question);
+//        System.out.println(Questions.find.byId(id).ques);
         return Questions.find.byId(id);
     }
     

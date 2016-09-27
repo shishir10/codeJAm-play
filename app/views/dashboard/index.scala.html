@@ -5,14 +5,16 @@
   <div class="row">
     <div class="col-md-2">
       Some image
-      Hello @Questions.getQuestion.link
+      Hello
     </div>
     <div class="col-md-10">
       <div class="container col-md-12">
         <div class="jumbotron">
           <h3>Question</h3>
-          <p style="font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id augue sit amet ante sagittis malesuada. Etiam in dolor libero. Praesent id mauris sit amet velit condimentum pretium. Donec accumsan molestie massa ac vehicula. Fusce ipsum nulla, euismod sit amet justo porta, maximus aliquam massa. Nullam vitae nunc neque. Maecenas id justo nibh. In sagittis aliquam dolor, non pulvinar tellus sagittis ac. Sed ullamcorper, lorem eu vestibulum ultrices, nisl ante bibendum magna, pulvinar mollis lacus lectus sit amet nunc. Quisque bibendum nunc libero, ut finibus diam consectetur vel. Mauris placerat enim ultrices, hendrerit tellus id, sodales dui. Aliquam laoreet nulla id pharetra suscipit. </p>
-          <a class="btn btn-success glyphicon glyphicon-download-alt" href="https://drive.google.com/open?id=0B6NAEwN6vyWfOERKM3J0TnZsMnc"> data-set</a>
+          <p style="font-size:16px;">
+            @Html(Questions.getQuestion.ques)
+          </p>
+          <a class="btn btn-success glyphicon glyphicon-download-alt" href="@Questions.getQuestion.link" target="_blank"> data-set</a>
           <button class="btn btn-primary glyphicon glyphicon-stats"> submissions</button>
         </div>
       </div>
