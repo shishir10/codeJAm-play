@@ -1,6 +1,7 @@
 package controllers;
 
 
+import models.College;
 import models.Users;
 import models.utils.AppException;
 import play.Logger;
@@ -46,7 +47,7 @@ public class Application extends Controller {
             }
         }
 
-        return ok(index.render(form(Register.class), form(Login.class)));
+        return ok(index.render(form(Register.class), form(Login.class), College.listCol()));
     }
 
     /**
@@ -91,10 +92,21 @@ public class Application extends Controller {
         public String fullname;
         
         @Constraints.Required
-        public String college;
-
-        @Constraints.Required
         public String inputPassword;
+        
+        @Constraints.Required
+        public Long phoneNumber;
+        
+        @Constraints.Required
+        public String college;
+        
+        @Constraints.Required
+        public String branch;
+        
+        @Constraints.Required
+        public int graduationYear;
+        
+        
 
         /**
          * Validate the authentication.
@@ -117,12 +129,32 @@ public class Application extends Controller {
             if (isBlank(inputPassword)) {
                 return "Password is required";
             }
+            
+            if (isBlank(phoneNumber)) {
+                return "Password is required";
+            }
+            
+            if (isBlank(branch)) {
+                return "Branch is required";
+            }
+            
+            if (isBlank(graduationYear)) {
+                return "Graduation Year is required";
+            }
 
             return null;
         }
 
         private boolean isBlank(String input) {
             return input == null || input.isEmpty() || input.trim().isEmpty();
+        }
+        
+        private boolean isBlank(Long input) {
+            return input == null;
+        }
+        
+        private boolean isBlank(int input) {
+            return (input == 0);
         }
     }
 
@@ -137,7 +169,7 @@ public class Application extends Controller {
         Form<Register> registerForm = form(Register.class);
 
         if (loginForm.hasErrors()) {
-            return badRequest(index.render(registerForm, loginForm));
+            return badRequest(index.render(registerForm, loginForm, College.listCol()));
         } else {
             session("email", loginForm.get().email);
             return GO_DASHBOARD;

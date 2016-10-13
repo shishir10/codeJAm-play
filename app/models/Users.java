@@ -12,11 +12,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.ManyToOne;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
- * User: yesnault
- * Date: 20/01/12
+ * User: yesnault Date: 20/01/12
  */
 @Entity
 public class Users extends Model {
@@ -32,10 +32,22 @@ public class Users extends Model {
     @Constraints.Required
     @Formats.NonEmpty
     public String fullname;
-    
+
     @Constraints.Required
     @Formats.NonEmpty
     public String college;
+
+    @Constraints.Required
+    @Formats.NonEmpty
+    public String branch;
+
+    @Constraints.Required
+    @Formats.NonEmpty
+    public int graduationYear;
+
+    @Constraints.Required
+    @Formats.NonEmpty
+    public Long phoneNumber;
 
     public String confirmationToken;
 
@@ -43,9 +55,8 @@ public class Users extends Model {
     @Formats.NonEmpty
     public String passwordHash;
 
-    
     Calendar cal = Calendar.getInstance();
-    
+
     @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
     public Date dateCreation = cal.getTime();
 
@@ -53,7 +64,7 @@ public class Users extends Model {
     public Boolean validated = false;
 
     // -- Queries (long id, user.class)
-    public static Model.Finder<Long, Users> find = new Model.Finder<Long, Users>(Long.class, Users.class);
+    public static Model.Finder<Long, Users> find = new Model.Finder<>(Long.class, Users.class);
 
     /**
      * Retrieve a user from an email.
@@ -65,6 +76,10 @@ public class Users extends Model {
         return find.where().eq("email", email).findUnique();
     }
 
+    public static Users findByPhoneNumber(Long phNumber) {
+        return find.where().eq("phoneNumber", phNumber).findUnique();
+    }
+
     /**
      * Retrieve a user from a fullname.
      *
@@ -74,8 +89,8 @@ public class Users extends Model {
     public static Users findByFullname(String fullname) {
         return find.where().eq("fullname", fullname).findUnique();
     }
-    
-     public static ExpressionList<Users> findByCollege(String college) {
+
+    public static ExpressionList<Users> findByCollege(String college) {
         return find.where().eq("college", college);
     }
 
@@ -92,7 +107,7 @@ public class Users extends Model {
     /**
      * Authenticate a User, from a email and clear password.
      *
-     * @param email         email
+     * @param email email
      * @param clearPassword clear password
      * @return User if authenticated, null otherwise
      * @throws AppException App Exception
@@ -132,4 +147,12 @@ public class Users extends Model {
         return true;
     }
 
+    public static Map<String, Boolean> listusers() {
+        Map<String, Boolean> userMap = new TreeMap<>();
+        userMap.put("test1", Boolean.FALSE);
+        userMap.put("test2", Boolean.FALSE);
+        userMap.put("test3", Boolean.FALSE);
+        userMap.put("test4", Boolean.FALSE);
+        return userMap;
+    }
 }

@@ -1,48 +1,64 @@
-@(signupForm: Form[Application.Register])
+@(signupForm: Form[Application.Register], listus: Map[String,Boolean])
 
 @import helper._
-@implicitFieldConstructor = @{
-    FieldConstructor(twitterBootstrapInput.render)
-}
+
+
+@import views.html.bootstrap3._
 
 @import Application.Register
 
-<h3>@Messages("signup.new")</h3>
-
+<h3>Register</h3>
+<br>
 @form(controllers.account.routes.Signup.save()) {
 
-    <fieldset>
-        @inputText(
-        signupForm("email"),
-        'placeholder -> Messages("email"),
-        '_label -> null,
-        'class -> "form-control"
-        )
-        @inputText(
-        signupForm("fullname"),
-        'placeholder -> Messages("fullname"),
-        '_label -> null,
-        'class -> "form-control"
-        )
-        @inputPassword(
-        signupForm("inputPassword"),
-        '_label -> null,
-        'placeholder -> Messages("password"),
-        'class -> "form-control"
-        )
-        @helper.select(signupForm("college"),
-            options = Seq(
-            "test college" -> "Test College",
-            "test college1" -> "Test College 1",
-            "test college2" -> "Test College 2"
-            ),
-        '_label -> null
-        )
+  <fieldset>
+  @email(
+    signupForm("email"),
+    label = "E-mail",
+    placeholder = "Email Address",
+    help = "Please enter your email address (required)"
+  )
+  @password(
+    signupForm("inputPassword"),
+    label = "Password",
+    placeholder = "",
+    help = "Password must be five or more characters. (required)"
+  )
+  @text(
+    signupForm("fullname"),
+    label = "Full name",
+    placeholder = "You full name",
+    help = "Please enter your first and last name. (required)"
+  )
+  @number(
+    signupForm("phoneNumber"),
+    label = "Contact",
+    placeholder = "Enter your 10 digit phone number",
+    help = "Please enter your phone number. (required)"
+  )
+  @bselect(signupForm("college"),
+          label = "College",
+          optionMap = listus,
+          isMultiple = false,
+          help = "Select you college. (required)"
+  )
+  @number(
+    signupForm("graduationYear"),
+    label = "Graduation Year",
+    placeholder = "Enter your graduation year",
+    help = "Please enter your graduatiob year. (required)"
+  )
+  @text(
+    signupForm("branch"),
+    label = "Branch",
+    placeholder = "You branch or stream",
+    help = "Please enter your branch or stream. (required)"
+  )
 
 
-    </fieldset>
+</fieldset>
 
-    <div class="form-actions">
-        <input type="submit" class="btn btn-primary" value="@Messages("signup.signup")">
-        </div>
-    }
+<div class="form-actions">
+<input type="submit" class="btn btn-primary" value="@Messages("signup.signup")">
+</div>
+}

@@ -1,17 +1,13 @@
-@(signupForm: Form[Application.Register])
+@(signupForm: Form[Application.Register], listus: Map[String,Boolean])
 
-    @scripts = {
-        <script src="@routes.Assets.at("javascripts/password.js")" type="text/javascript"></script>
-    }
 
-@main(null, scripts) {
-    <div class="span3">
-            &nbsp;
-    </div>
+
+@main(null, null) {
+
 
     <div class="span12">
         <div class="well">
-        @createFormOnly(signupForm)
+        @createFormOnly(signupForm, listus)
         </div>
     </div>
 }

@@ -12,7 +12,6 @@ import play.data.Form;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
-import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 
 import javax.inject.Inject;
@@ -24,6 +23,7 @@ import views.html.account.signup.created;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.UUID;
+import models.College;
 
 import static play.data.Form.form;
 
@@ -43,7 +43,7 @@ public class Signup extends Controller {
      * @return create form
      */
     public Result create() {
-        return ok(create.render(form(Application.Register.class)));
+        return ok(create.render(form(Application.Register.class), College.listCol()));
     }
 
     /**
@@ -52,7 +52,7 @@ public class Signup extends Controller {
      * @return create form
      */
     public Result createFormOnly() {
-        return ok(create.render(form(Application.Register.class)));
+        return ok(create.render(form(Application.Register.class), College.listCol()));
     }
 
     /**
@@ -64,7 +64,7 @@ public class Signup extends Controller {
         Form<Application.Register> registerForm = form(Application.Register.class).bindFromRequest();
 
         if (registerForm.hasErrors()) {
-            return badRequest(create.render(registerForm));
+            return badRequest(create.render(registerForm, College.listCol()));
         }
 
         Application.Register register = registerForm.get();
@@ -79,6 +79,9 @@ public class Signup extends Controller {
             user.email = register.email;
             user.fullname = register.fullname;
             user.passwordHash = Hash.createPassword(register.inputPassword);
+            user.phoneNumber = register.phoneNumber;
+            user.branch = register.branch;
+            user.graduationYear = register.graduationYear;
             user.college = register.college;
             user.confirmationToken = UUID.randomUUID().toString();
 
@@ -93,7 +96,7 @@ public class Signup extends Controller {
             Logger.error("Signup.save error", e);
             flash("error", Messages.get("error.technical"));
         }
-        return badRequest(create.render(registerForm));
+        return badRequest(create.render(registerForm, College.listCol()));
     }
 
     /**
@@ -107,7 +110,7 @@ public class Signup extends Controller {
         // Check unique email
         if (Users.findByEmail(email) != null) {
             flash("error", Messages.get("error.email.already.exist"));
-            return badRequest(create.render(registerForm));
+            return badRequest(create.render(registerForm, College.listCol()));
         }
 
         return null;
