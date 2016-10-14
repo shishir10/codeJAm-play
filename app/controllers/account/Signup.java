@@ -30,7 +30,7 @@ import static play.data.Form.form;
 /**
  * Signup to PlayStartApp : save and send confirm mail.
  * <p/>
- * User: yesnault
+ * User: shishir
  * Date: 31/01/12
  */
 public class Signup extends Controller {

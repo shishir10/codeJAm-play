@@ -1,0 +1,84 @@
+@(user: Users, attempt: Integer, sub: List[models.submissions], regform: Form[Submissions.Submit])
+@import Submissions.Submit
+@import helper._
+
+@main(user){
+
+  <h1>My Submissions</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <br><br>
+      @flash.map {
+          case (key, value) => {
+              <p class="">
+                <div class="alert alert-@key">
+                  @value
+                </div>
+              </p>
+          }
+      }
+      <br><br>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Submit new file</h4>
+          @form(routes.Submissions.uploadCsv(), 'enctype -> "multipart/form-data") {
+            <input type="file" name="picture" class="btn btn-primary">
+            <p>
+              <input type="submit">
+            </p>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      @if(sub.size != 0){
+        <ul class="nav nav-pills">
+          <li class="active"><a data-toggle="pill" href="#Attempt1">Attempt 1</a></li>
+          @for(i <- 2 to attempt){
+            <li><a data-toggle="pill" href="#Attempt@i">Attempt @i</a></li>
+          }
+        </ul>
+        <div class="tab-content">
+          @for(i <- 1 to attempt){
+            <div id="Attempt@i" class="@if(i == 1){tab-pane fade in active}else{tab-pane fade}">
+              <div class=" table-responsive">
+                <!-- <h3>My Submissions</h3> -->
+                <br>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <td>Column Name</td>
+                      <td>Answer</td>
+                    </tr>
+                    </thead
+                    <tbody>
+                      @for(s <- sub){
+                        @if(s.attempt == i){
+                          <tr>
+                            <td>@s.columnValue</td>
+                            <td>@s.answer</td>
+                          </tr>
+                        }
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              }
+          </div>
+          } else {
+            <br><br>
+            <h3><kbd>No submissions found !!</kbd></h3>
+          }
+      </div>
+      <!-- <div class="col-md-3">
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-6">
+      </div>
+    </div>
+
+  }

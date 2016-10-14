@@ -1,16 +1,14 @@
 package controllers;
 
-import models.Questions;
 import models.Users;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
-import play.twirl.api.Html;
 import views.html.dashboard.index;
 
 /**
- * User: yesnault
- * Date: 22/01/12
+ * User: shishir
+ * Date: 25/09/16
  */
 @Security.Authenticated(Secured.class)
 public class Dashboard extends Controller {

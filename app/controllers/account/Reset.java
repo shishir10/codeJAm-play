@@ -12,7 +12,6 @@ import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.account.reset.ask;
-import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 
 import javax.inject.Inject;
@@ -31,7 +30,7 @@ import static play.data.Form.form;
  * - show the reset page and set them reset it.
  * <p/>
  * <p/>
- * User: yesnault
+ * User: shishir
  * Date: 20/01/12
  */
 public class Reset extends Controller {

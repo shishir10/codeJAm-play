@@ -1,13 +1,13 @@
-New log file opened at Thu Oct 13 14:02:52 IST 2016 by 12520@HP-Notebook
-Taking next connection to: 44288
-New client attempting to connect on port: 45090-44288
-  Address = /127.0.1.1:44288
-This client on port 45090 has uuid ff429f04-9eaa-4da1-a653-4646834c2f7e configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-ff429f04-9eaa-4da1-a653-4646834c2f7e
-Taking next connection to: 44288
-New client attempting to connect on port: 45092-44288
-  Address = /127.0.1.1:44288
-Handshake exception on socket: 45092
+New log file opened at Fri Oct 14 17:08:33 IST 2016 by 26734@HP-Notebook
+Taking next connection to: 39359
+New client attempting to connect on port: 34006-39359
+  Address = /127.0.1.1:39359
+This client on port 34006 has uuid 537b8034-08ab-4d25-ae1d-d1e72cfffe27 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-537b8034-08ab-4d25-ae1d-d1e72cfffe27
+Taking next connection to: 39359
+New client attempting to connect on port: 34008-39359
+  Address = /127.0.1.1:39359
+Handshake exception on socket: 34008
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -17,39 +17,129 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 44288
-New client attempting to connect on port: 45094-44288
-  Address = /127.0.1.1:44288
-This client on port 45094 has uuid 6fa9bd35-819d-4cd6-88ec-27b57fc2e6db configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-ff429f04-9eaa-4da1-a653-4646834c2f7e, play-fork-run-6fa9bd35-819d-4cd6-88ec-27b57fc2e6db
-Taking next connection to: 44288
+Taking next connection to: 39359
+New client attempting to connect on port: 34010-39359
+  Address = /127.0.1.1:39359
+This client on port 34010 has uuid 2624897b-577e-4d50-ae92-36658080dabf configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-537b8034-08ab-4d25-ae1d-d1e72cfffe27, play-fork-run-2624897b-577e-4d50-ae92-36658080dabf
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 44288
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 39359

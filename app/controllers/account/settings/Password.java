@@ -17,7 +17,7 @@ import javax.inject.Inject;
 import java.net.MalformedURLException;
 
 /**
- * User: yesnault
+ * User: shishir
  * Date: 15/05/12
  */
 @Security.Authenticated(Secured.class)

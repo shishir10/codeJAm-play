@@ -1,6 +1,5 @@
 package controllers;
 
-
 import models.College;
 import models.Users;
 import models.utils.AppException;
@@ -13,11 +12,9 @@ import play.mvc.Result;
 import views.html.index;
 
 import static play.data.Form.form;
-import scala.collection.Seq;
 
 /**
- * Login and Logout.
- * User: yesnault
+ * Login and Logout. User: shishir
  */
 public class Application extends Controller {
 
@@ -90,23 +87,21 @@ public class Application extends Controller {
 
         @Constraints.Required
         public String fullname;
-        
+
         @Constraints.Required
         public String inputPassword;
-        
+
         @Constraints.Required
         public Long phoneNumber;
-        
+
         @Constraints.Required
         public String college;
-        
+
         @Constraints.Required
         public String branch;
-        
+
         @Constraints.Required
         public int graduationYear;
-        
-        
 
         /**
          * Validate the authentication.
@@ -121,7 +116,7 @@ public class Application extends Controller {
             if (isBlank(fullname)) {
                 return "Full name is required";
             }
-            
+
             if (isBlank(college)) {
                 return "Select a College to continue";
             }
@@ -129,15 +124,15 @@ public class Application extends Controller {
             if (isBlank(inputPassword)) {
                 return "Password is required";
             }
-            
+
             if (isBlank(phoneNumber)) {
                 return "Password is required";
             }
-            
+
             if (isBlank(branch)) {
                 return "Branch is required";
             }
-            
+
             if (isBlank(graduationYear)) {
                 return "Graduation Year is required";
             }
@@ -148,11 +143,11 @@ public class Application extends Controller {
         private boolean isBlank(String input) {
             return input == null || input.isEmpty() || input.trim().isEmpty();
         }
-        
+
         private boolean isBlank(Long input) {
             return input == null;
         }
-        
+
         private boolean isBlank(int input) {
             return (input == 0);
         }
@@ -186,5 +181,5 @@ public class Application extends Controller {
         flash("success", Messages.get("youve.been.logged.out"));
         return GO_HOME;
     }
-
+    
 }
