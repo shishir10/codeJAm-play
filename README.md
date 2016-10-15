@@ -44,4 +44,4 @@ This is a simple application using Play Framework for Jigsaw hackathon
 * BSD. See LICENSE file
 
 ## Contact
-Twitter : @yesnault
+instagram: @shishir10
