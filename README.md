@@ -1,6 +1,6 @@
-# PlayStartApp
+# CodeJam
 
-This is a sample application using Play Framework (See tags https://github.com/yesnault/PlayStartApp/tags for download)
+This is a simple application using Play Framework for Jigsaw hackathon
 
 ## Features
 * Sign Up
@@ -8,6 +8,11 @@ This is a sample application using Play Framework (See tags https://github.com/y
 * Reset password
 * Settings Page
 * Change email from Settings
+* Display multiple questions with Data-Set links and submissions page links
+* Each question has seperate submission pages and data.
+* The best score out of all the submissions is stored.
+* The upload and evaluation happens asynchronously, integrated with AJAX
+* Leaderboard displays all the users of same college, sorted via percentage.
 
 ## Application details
 * No clear password stored in db
@@ -21,7 +26,6 @@ This is a sample application using Play Framework (See tags https://github.com/y
 * Using a password strength checker
 
 ## Try
-* Rename conf/email.conf.example in conf/email.conf and check it (smtp, etc...)
 * Download Activator from http://www.playframework.org/
 * Open a terminal in PlayStartApp directory and exec `activator run`
 * Generate Scala Doc & Javadoc with exec `activator app-doc` (task app-doc add in Build.scala file)

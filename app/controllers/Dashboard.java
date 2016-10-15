@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.List;
+import models.Questions;
 import models.Users;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -16,6 +18,7 @@ public class Dashboard extends Controller {
     public Result index() {
 //        String question = Questions.getQuestion().question;
 //        Html ques = Html.apply(question);
-        return ok(index.render(Users.findByEmail(request().username())));
+        List<Questions> ques = Questions.find.all();
+        return ok(index.render(Users.findByEmail(request().username()), ques));
     }
 }

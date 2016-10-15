@@ -7,8 +7,7 @@ package models;
 
 import com.avaje.ebean.Model;
 import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -18,7 +17,7 @@ import javax.persistence.ManyToOne;
  * @author shishir
  */
 @Entity
-public class submissions extends Model {
+public class Scorecard extends Model {
     @Id
     public Long id;
     
@@ -27,18 +26,13 @@ public class submissions extends Model {
     
     @ManyToOne
     public Questions quest;
-    
-    public String columnValue;
-    
-    public int answer;
-    
+            
     public int attempt;
-    
+    public int marks;
+    public int maxMarks;
+    public float percent;
     Calendar dateCreated = Calendar.getInstance();
     
-    public static Model.Finder<Long, submissions> find = new Model.Finder<>(Long.class, submissions.class);
+    public static Model.Finder<Long, Scorecard> find = new Model.Finder<>(Long.class, Scorecard.class);
     
-    public static List<submissions> findByUser(Users user) {
-        return find.where().eq("user", user).findList();
-    }
 }

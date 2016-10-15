@@ -7,38 +7,28 @@ package models;
 
 import com.avaje.ebean.Model;
 import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
  * @author shishir
  */
 @Entity
-public class submissions extends Model {
+public class Answers extends Model {
+    
     @Id
     public Long id;
     
     @ManyToOne
-    public Users user;
+    public Questions question;
     
-    @ManyToOne
-    public Questions quest;
-    
-    public String columnValue;
-    
+    public String colVal;
     public int answer;
-    
-    public int attempt;
-    
     Calendar dateCreated = Calendar.getInstance();
     
-    public static Model.Finder<Long, submissions> find = new Model.Finder<>(Long.class, submissions.class);
+    public static Model.Finder<Long, Answers> find = new Model.Finder<>(Long.class, Answers.class);
     
-    public static List<submissions> findByUser(Users user) {
-        return find.where().eq("user", user).findList();
-    }
 }
