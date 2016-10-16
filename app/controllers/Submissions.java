@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,7 @@ import play.mvc.Http;
 import play.mvc.Result;
 import static play.mvc.Results.ok;
 import play.mvc.Security;
+import views.html.submissions.leaderboard;
 import views.html.submissions.submissions;
 
 /**
@@ -58,7 +60,10 @@ public class Submissions extends Controller {
                 .and(Expr.eq("user_id", Users.findByEmail(request().username()).id), 
                         Expr.eq("quest_id", id)).findUnique();
         System.out.println(card);
-        return ok(submissions.render(Users.findByEmail(request().username()), atempt, sub, form(Submit.class), id, card));
+        if (Questions.find.byId(id).isActive)
+            return ok(submissions.render(Users.findByEmail(request().username()), atempt, sub, form(Submit.class), id, card));
+        else
+            return ok("<br><br><center><strong>Access Denied !!</strong></center>").as("text/html");
     }
 
     public Result uploadCsv(Long id) {
@@ -150,8 +155,9 @@ public class Submissions extends Controller {
         }
 //        Scorecard card = Scorecard.find.where()
 //                .and(Expr.eq("user", user), Expr.eq("quest", question)).findUnique();
-        List<Scorecard> all = Scorecard.find.all();
-        if (all.isEmpty()) {
+        List<Scorecard> all = Scorecard.find.where().eq("user_id", user.id).findList();
+        if (all.size() == 0) {
+            System.out.println("inside");
             Scorecard card = new Scorecard();
             card.user = user;
             card.attempt = attempt;
@@ -173,4 +179,21 @@ public class Submissions extends Controller {
             }
         }
     }
+    
+    public Result leaderboard(){
+        Users user = Users.findByEmail(request().username());
+        List<Questions> questions = Questions.find.where().eq("is_active", true).findList();
+        List<Scorecard> scores = new ArrayList<>();
+        List<Scorecard> allScores = Scorecard.find.where()
+                .orderBy("percent desc").findList();
+        for (Scorecard score : allScores){
+            if (user.college.equals(score.user.college) && score.quest.isActive) {
+                System.out.println(score.user.fullname + "    " + score.percent);
+                scores.add(score);
+                System.out.println(score.user.fullname + "    " + score.percent);
+            }
+        }
+        return ok(leaderboard.render(user, scores));
+    }
+
 }

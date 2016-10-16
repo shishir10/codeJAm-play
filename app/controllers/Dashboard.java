@@ -18,7 +18,7 @@ public class Dashboard extends Controller {
     public Result index() {
 //        String question = Questions.getQuestion().question;
 //        Html ques = Html.apply(question);
-        List<Questions> ques = Questions.find.all();
+        List<Questions> ques = Questions.find.where().eq("is_active", true).findList();
         return ok(index.render(Users.findByEmail(request().username()), ques));
     }
 }

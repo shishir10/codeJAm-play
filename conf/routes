@@ -37,3 +37,5 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET     /submissions/:id            controllers.Submissions.submissions(id:Long)
 POST    /submissions                controllers.Submissions.uploadCsv(id:Long)
+
+GET     /leaderboard                controllers.Submissions.leaderboard()

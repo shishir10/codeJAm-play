@@ -1,0 +1,32 @@
+@(user: Users, cards: List[Scorecard])
+
+@main(user){
+  <br><br>
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    @if(cards.size != 0 ){
+      <h2>Leaderboard</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>Rank</td>
+            <td>Name</td>
+            <td>Attempts</td>
+            <td>Score</td>
+          </tr>
+        </thead>
+        <tbody>
+          @for(i <- 0 until cards.size){
+            <tr>
+              <td>@(i+1)</td>
+              <td>@cards(i).user.fullname</td>
+              <td>@cards(i).attempt</td>
+              <td>@cards(i).percent</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+  <div class="col-md-3"></div>
+}

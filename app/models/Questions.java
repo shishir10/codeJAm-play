@@ -34,6 +34,8 @@ public class Questions extends Model {
     @Formats.NonEmpty
     public String link;
     
+    public boolean isActive;
+    
     @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
     public Calendar dateCreation = Calendar.getInstance();
     

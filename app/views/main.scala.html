@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <title>@Messages("title")</title>
+        <title>Jigsaw Hackathon</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
@@ -25,9 +25,12 @@
                 <a class="navbar-brand" href="@routes.Application.index()">
                     <i class="fa fa-rocket"></i> CodeJam
                 </a>
+                @if(user != null){
                 <ul class="nav navbar-nav navbar-right">
                     <li class=""><a href="@routes.Application.index()">Home</a></li>
+                    <li class=""><a href="@routes.Submissions.leaderboard()">Leaderboard</a></li>
                 </ul>
+              }
             </div>
             @logged(user)
         </div>
