@@ -1,5 +1,5 @@
-New log file opened at Sun Oct 16 03:16:17 IST 2016 by 23561@HP-Notebook
-jvm 23561@HP-Notebook
+New log file opened at Mon Oct 17 11:35:03 IST 2016 by 6193@HP-Notebook
+jvm 6193@HP-Notebook
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.101-b13
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /home/shishir/NetBeansProjects/codeJam/project, returning: (codejam-build)
 Loading project definition from /home/shishir/NetBeansProjects/codeJam/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@8f38951, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@393fd330, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,10 +67,264 @@ Set current project to codeJam (in build file:/home/shishir/NetBeansProjects/cod
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-Done executing sbt server engine, result Right(Exit(0))
-Closing listening server socket
-Waiting for socket thread
-Waiting for request processor thread
-Waiting for command engine result
-Returning control to sbt launcher with result Exit(0)
-Closing the 23561@HP-Notebook logs at Sun Oct 16 03:19:18 IST 2016, goodbye.
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@5a7f46ba, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 7 s, completed 17 Oct, 2016 11:35:28 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@62cfa098, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 2 s, completed 17 Oct, 2016 11:35:29 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@f03b5e4, check cycles: false
+Total time: 0 s, completed 17 Oct, 2016 11:35:29 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@490341e5, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 2 s, completed 17 Oct, 2016 11:35:31 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@195840c3, check cycles: false
+Total time: 0 s, completed 17 Oct, 2016 11:35:36 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@2edb0124, check cycles: false
+Total time: 1 s, completed 17 Oct, 2016 11:35:42 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@42ea511a, check cycles: false
+Total time: 0 s, completed 17 Oct, 2016 11:35:44 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@e31276a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/home/shishir/NetBeansProjects/codeJam/conf/routes,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/routes)
+	(/home/shishir/NetBeansProjects/codeJam/conf/mail.conf.example,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/mail.conf.example)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.en,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.en)
+	(/home/shishir/NetBeansProjects/codeJam/conf/play.plugins,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/play.plugins)
+	(/home/shishir/NetBeansProjects/codeJam/conf/cloudbees.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/cloudbees.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/application.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/application.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.fr,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.fr)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default/1.sql,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default/1.sql)
+Total time: 3 s, completed 17 Oct, 2016 11:35:59 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@5b8b9518, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/home/shishir/NetBeansProjects/codeJam/conf/routes,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/routes)
+	(/home/shishir/NetBeansProjects/codeJam/conf/mail.conf.example,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/mail.conf.example)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.en,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.en)
+	(/home/shishir/NetBeansProjects/codeJam/conf/play.plugins,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/play.plugins)
+	(/home/shishir/NetBeansProjects/codeJam/conf/cloudbees.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/cloudbees.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/application.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/application.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.fr,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.fr)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default/1.sql,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default/1.sql)
+Total time: 4 s, completed 17 Oct, 2016 1:00:03 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1570d257, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/home/shishir/NetBeansProjects/codeJam/conf/routes,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/routes)
+	(/home/shishir/NetBeansProjects/codeJam/conf/mail.conf.example,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/mail.conf.example)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.en,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.en)
+	(/home/shishir/NetBeansProjects/codeJam/conf/play.plugins,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/play.plugins)
+	(/home/shishir/NetBeansProjects/codeJam/conf/cloudbees.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/cloudbees.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/application.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/application.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.fr,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.fr)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default/1.sql,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default/1.sql)
+Total time: 2 s, completed 17 Oct, 2016 1:06:36 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@10d00954, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/home/shishir/NetBeansProjects/codeJam/conf/routes,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/routes)
+	(/home/shishir/NetBeansProjects/codeJam/conf/mail.conf.example,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/mail.conf.example)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.en,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.en)
+	(/home/shishir/NetBeansProjects/codeJam/conf/play.plugins,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/play.plugins)
+	(/home/shishir/NetBeansProjects/codeJam/conf/cloudbees.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/cloudbees.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/application.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/application.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.fr,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.fr)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default/1.sql,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default/1.sql)
+Total time: 1 s, completed 17 Oct, 2016 1:08:16 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/shishir/NetBeansProjects/codeJam/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@30873662, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/home/shishir/NetBeansProjects/codeJam/conf/routes,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/routes)
+	(/home/shishir/NetBeansProjects/codeJam/conf/mail.conf.example,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/mail.conf.example)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.en,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.en)
+	(/home/shishir/NetBeansProjects/codeJam/conf/play.plugins,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/play.plugins)
+	(/home/shishir/NetBeansProjects/codeJam/conf/cloudbees.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/cloudbees.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/application.conf,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/application.conf)
+	(/home/shishir/NetBeansProjects/codeJam/conf/messages.fr,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/messages.fr)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default)
+	(/home/shishir/NetBeansProjects/codeJam/conf/evolutions/default/1.sql,/home/shishir/NetBeansProjects/codeJam/target/scala-2.10/classes/evolutions/default/1.sql)
+Total time: 1 s, completed 17 Oct, 2016 1:09:16 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@6716b5fa, check cycles: false
+Total time: 0 s, completed 17 Oct, 2016 1:25:43 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
